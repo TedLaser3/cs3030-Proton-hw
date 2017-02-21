@@ -19,6 +19,13 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
+#basic command
+#wget http://icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_2015.tar.gz
+#wget http://icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_2016.tar.gz
+
+#prompt if number given is not 2015 or 2016
+
+#get both files without hardcoding the number
 
 exit 0
 

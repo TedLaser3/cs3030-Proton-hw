@@ -63,6 +63,22 @@ then
 	usage
 fi
 
+# Call wget
+bash Proton_hw4_wget.sh $year 
+
+# Call Expand Tar files scripts
+
+
+# Call Filter script
+
+
+# Call Compress final file script
+
+
+# Call FTP script
+
+
+# Call Cleanup script
 
 exit 0
 

@@ -19,13 +19,12 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
-mkdir tarTemp
 
-tar -xzf $PWD/temp/MOCK_DATA_2015.tar.gz >> tarTemp
-tar -xzf $PWD/temp/MOCK_DATA_2016.tar.gz >> tarTemp
+tar -xzf ./temp/MOCK_DATA_2015.tar.gz
+tar -xzf ./temp/MOCK_DATA_2016.tar.gz
 
 for file in tarTemp
-do awk -f ',' echo $1 $4 $6 > output.txt
+do awk -f ',' NR>1  {print $1 "," $4 "," $6 > output.txt}
 done
 
 

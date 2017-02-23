@@ -23,8 +23,11 @@
 #MOCK_DATA_FILTER_YYYY_MM_DD_HH:MM.zip
 #time stamp variable
 ts=`date +%Y_%m_%d_%H:%M`
+file=MOCK_DATA_FILTER_$ts.zip
 
+#rename and zip vile
 
+# zip (file path) $file
 
 
 exit 0

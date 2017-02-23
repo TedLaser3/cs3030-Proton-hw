@@ -72,7 +72,7 @@ bash Proton_hw4_wget.sh $year
 # Call Filter script
 
 
-# Call Compress final file script
+# Call Zip final file script
 
 
 # Call FTP script

@@ -21,6 +21,10 @@
 #create zip file
 
 #MOCK_DATA_FILTER_YYYY_MM_DD_HH:MM.zip
+#time stamp variable
+ts=`date +%Y_%m_%d_%H:%M`
+
+
 
 
 exit 0

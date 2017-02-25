@@ -28,8 +28,9 @@
 file=$1
 #rename and zip vile
 
-zip ./temp/* $file
-
+cd temp
+zip $file Filtered.txt
+cd ..
 
 exit 0
 

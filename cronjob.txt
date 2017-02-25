@@ -1,0 +1,2 @@
+#put this in the crontab file
+0 8,14 * * 1-5 ./bash Proton_hw4_wrapper.sh

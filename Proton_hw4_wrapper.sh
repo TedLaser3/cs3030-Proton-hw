@@ -37,7 +37,7 @@ fi
 # close function
 close ()
 {
-	bash delete.sh #calling delete script
+	bash Proton_hw4_cleaner.sh #calling delete script
 	exit 1
 }
 # getopts file, order should not matter
@@ -73,7 +73,7 @@ fi
 bash Proton_hw4_wget.sh $year
 
 	#check script and dump if fail
-	if [[ $? -eq 0 ]]
+	if [[ $? -ne 0 ]]
 	then 
 		close
 	fi
@@ -82,7 +82,7 @@ bash Proton_hw4_wget.sh $year
 bash Proton_hw4_tar.sh 
 
 	#check script and dump if fail
-	if [[ $? -eq 0 ]]
+	if [[ $? -ne 0 ]]
 	then
 		close
 	fi
@@ -91,30 +91,35 @@ bash Proton_hw4_tar.sh
 bash Proton_hw4_sed.sh
 
 	#check script and dump if fail
-	if [[ $? -eq 0 ]]
+	if [[ $? -ne 0 ]]
 	then 
 		close
 	fi
 
 # Call Zip final file script
-
+bash Proton_hw4_zip.sh
 
 	#check script and dump if fail
-	if [[ $? -eq 0 ]]
+	if [[ $? -ne 0 ]]
 	then 
 		close
 	fi
 
 # Call FTP script
-
+bash Proton_hw4_ftp.sh -u $user -p $passwd -e $email
 
 	#check script and dump if fail
-	if [[ $? -eq 0 ]]
+	if [[ $? -ne 0 ]]
 	then 
 		close
 	fi
 
 # Call Cleanup script
+bash Proton_hw4_cleaner.sh
+
+#if all is succesful to here, send an email to given email address
+
+
 
 exit 0
 

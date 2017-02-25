@@ -22,7 +22,7 @@
 #pass=Bluesky17
 
 #getops
-while getopts ":u:p:e:" opt
+while getopts ":u:p:e:f:" opt
 do
 	case $opt in
 		u) user=$OPTARG
@@ -30,6 +30,8 @@ do
 		p) pass=$OPTARG
 			;;
 		e) email=$OPTARG
+			;;
+		f) file=$OPTARG
 			;;
 	esac
 done
@@ -41,7 +43,7 @@ done
 #ls
 #exit
 #EOS
-ts=`date +%Y_%m_%d_%H:%M`
+
 #enter correct directory
 cd temp
 #if user AND password are provided use those
@@ -49,20 +51,20 @@ if [[ ! -z $user ]]
 then
 	ftp -n 137.190.19.93 << EOS
 	user $user $pass
-	put MOCK_DATA_FILTER_$ts.zip
+	put $file
 	exit
 EOS
-echo "File uploaded to $user home directory"
+echo "$file uploaded to $user home directory"
 #else use anonymous login
 elif [[ ! -z $email ]]
 then
 	ftp -n 137.190.19.93 << EOS
 	user anonymous $email
 	cd MockData
-	put MOCK_DATA_FILTER_$ts.zip
+	put $file
 	exit
 EOS
-echo "File uploaded to /srv/ftp/MockData"
+echo "$file uploaded to /srv/ftp/MockData"
 else
 	echo "please enter either a username and password or an email for anonymous ftp"
 	cd ..

@@ -19,13 +19,11 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
-grep -r 'Canada' ./temp/* |
+grep -rf 'Canada,Female' ./temp/* |
 
-grep -r 'female' ./temp/* |
+sed 's/,,/,waldo@weber.edu,/g' |
 
-sed 's/NULL/waldo@weber.edu/g' |
-
-awk -f ',' {print $1 "," $4 "," $6 > Filtered.txt}
+awk -f ',' {print $1 "," $4 "," $6 > ./temp/Filtered.txt}
 
 
 

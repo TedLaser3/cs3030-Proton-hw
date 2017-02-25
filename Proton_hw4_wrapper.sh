@@ -122,7 +122,7 @@ bash Proton_hw4_ftp.sh -u $user -p $passwd -e $email -f $file
 bash Proton_hw4_cleaner.sh
 
 #if all is succesful to here, send an email to given email address
-
+echo "$file uploaded" | mail -s "File Uploaded" $email
 
 
 exit 0

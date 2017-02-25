@@ -1,34 +1,27 @@
 #!/bin/bash - 
 #===============================================================================
 #
-#          FILE: Proton_hw4_zip.sh
+#          FILE: Proton_hw4_sed.sh
 # 
-#         USAGE: ./Proton_hw4_zip.sh 
+#         USAGE: ./Proton_hw4_sed.sh 
 # 
-#   DESCRIPTION: 
+#   DESCRIPTION: Sed to sort info
 # 
 #       OPTIONS: ---
 #  REQUIREMENTS: ---
 #          BUGS: ---
 #         NOTES: ---
-#        AUTHOR: Rob Lemmons (), robertlemmons@mail.weber.edu
+#        AUTHOR: Eli Orton (), eliorton@mail.weber.edu
 #  ORGANIZATION: 
-#       CREATED: 02/22/2017 00:34
+#       CREATED: 02/23/2017 20:08
 #      REVISION:  ---
 #===============================================================================
 
 #set -o nounset                              # Treat unset variables as an error
-#create zip file
 
-#MOCK_DATA_FILTER_YYYY_MM_DD_HH:MM.zip
-#time stamp variable
-ts=`date +%Y_%m_%d_%H:%M`
-file=MOCK_DATA_FILTER_$ts.zip
 
-#rename and zip vile
 
-# zip (file path) $file
+
 
 
 exit 0
-

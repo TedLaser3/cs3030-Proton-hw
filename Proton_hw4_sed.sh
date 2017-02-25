@@ -23,9 +23,9 @@ grep -r 'Canada' ./temp/* |
 
 grep -r 'female' ./temp/* |
 
-sed 's/NULL/waldo@weber.edu/g'
+sed 's/NULL/waldo@weber.edu/g' |
 
-
+awk -f ',' {print $1 "," $4 "," $6 > Filtered.txt}
 
 
 

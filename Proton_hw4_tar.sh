@@ -23,9 +23,7 @@ cd temp
 tar -xzf MOCK_DATA_2015.tar.gz
 tar -xzf MOCK_DATA_2016.tar.gz
 cd ..
-#bash ./Proton_hw4_sed.sh |
  
-#awk -f ',' {print $1 "," $4 "," $6 > output.txt}
 
 
 

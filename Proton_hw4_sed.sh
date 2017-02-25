@@ -19,12 +19,13 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
-grep -rf 'Canada,Female' ./temp/* |
+cd temp
+grep -ri "Female,Canada" MOCK_DATA*.csv > outputGREP.txt
 
-sed 's/,,/,waldo@weber.edu,/g' |
+sed 's/,,/,waldo@weber.edu,/g' outputGREP.txt > outputSED.txt
 
-awk -f ',' {print $1 "," $4 "," $6 > ./temp/Filtered.txt}
+awk -F, '{ print $2 " " $3 " " $4 }' outputSED.txt > Filtered.txt
 
-
+cd ..
 
 exit 0

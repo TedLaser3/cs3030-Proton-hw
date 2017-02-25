@@ -27,7 +27,7 @@ file=MOCK_DATA_FILTER_$ts.zip
 
 #rename and zip vile
 
-# zip (file path) $file
+zip ~/Homework-4/cs3030-proton-hw/temp/* $file
 
 
 exit 0

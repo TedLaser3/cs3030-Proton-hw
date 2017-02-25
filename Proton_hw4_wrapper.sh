@@ -79,16 +79,40 @@ bash Proton_hw4_wget.sh $year
 	fi
 
 # Call Expand Tar files scripts
+bash Proton_hw4_tar.sh 
 
+	#check script and dump if fail
+	if [[ $? -eq 0 ]]
+	then
+		close
+	fi
 
 # Call Filter script
+bash Proton_hw4_sed.sh
 
+	#check script and dump if fail
+	if [[ $? -eq 0 ]]
+	then 
+		close
+	fi
 
 # Call Zip final file script
 
 
+	#check script and dump if fail
+	if [[ $? -eq 0 ]]
+	then 
+		close
+	fi
+
 # Call FTP script
 
+
+	#check script and dump if fail
+	if [[ $? -eq 0 ]]
+	then 
+		close
+	fi
 
 # Call Cleanup script
 

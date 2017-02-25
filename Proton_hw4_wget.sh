@@ -32,7 +32,7 @@ case $year in
 		  ((year--))
 		  wget http://icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$year.tar.gz -P ./temp
 		;;
-	\?) echo "Unknown year, please enter wither 2015 or 2016"
+	\?) echo "Unknown year, please enter either 2015 or 2016"
 		exit 1
 		;;
 esac

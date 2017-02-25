@@ -5,7 +5,7 @@
 # 
 #         USAGE: ./Proton_hw4_cleaner.sh 
 # 
-#   DESCRIPTION: 
+#   DESCRIPTION: Cleans temp folder 
 # 
 #       OPTIONS: ---
 #  REQUIREMENTS: ---

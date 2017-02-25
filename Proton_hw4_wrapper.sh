@@ -5,7 +5,7 @@
 # 
 #         USAGE: ./Proton_hw4_wrapper.sh 
 # 
-#   DESCRIPTION: 
+#   DESCRIPTION: Wrapper script to call all other scripts 
 # 
 #       OPTIONS: ---
 #  REQUIREMENTS: ---

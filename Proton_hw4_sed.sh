@@ -5,7 +5,7 @@
 # 
 #         USAGE: ./Proton_hw4_sed.sh 
 # 
-#   DESCRIPTION: Sed to sort info
+#   DESCRIPTION: Grep to retrieve and sed to sort info
 # 
 #       OPTIONS: ---
 #  REQUIREMENTS: ---

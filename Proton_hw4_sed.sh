@@ -19,6 +19,11 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
+grep -r 'Canada' ./temp/* |
+
+grep -r 'female' ./temp/* |
+
+sed 's/NULL/waldo@weber.edu/g'
 
 
 

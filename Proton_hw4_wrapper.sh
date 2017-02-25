@@ -69,6 +69,10 @@ then
 	usage
 fi
 
+#generate final file name
+ts=`date +%Y_%m_%d_%H:%M`
+file=MOCK_DATA_FILTER_$ts.zip
+
 # Call wget
 bash Proton_hw4_wget.sh $year
 
@@ -97,7 +101,7 @@ bash Proton_hw4_sed.sh
 	fi
 
 # Call Zip final file script
-bash Proton_hw4_zip.sh
+bash Proton_hw4_zip.sh $file
 
 	#check script and dump if fail
 	if [[ $? -ne 0 ]]
@@ -106,7 +110,7 @@ bash Proton_hw4_zip.sh
 	fi
 
 # Call FTP script
-bash Proton_hw4_ftp.sh -u $user -p $passwd -e $email
+bash Proton_hw4_ftp.sh -u $user -p $passwd -e $email -f $file
 
 	#check script and dump if fail
 	if [[ $? -ne 0 ]]
